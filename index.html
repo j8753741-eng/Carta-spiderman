@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta del Asombroso Amor 🕸️</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Great+Vibes&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #8b0000 0%, #000000 100%);
+      color: #ffffff;
+      font-family: 'Oswald', sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #00bfff;
+      text-shadow: 0 0 12px #00bfff;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.7;
+      margin: 0 auto 80px auto;
+      max-width: 750px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #00bfff;
+      border-radius: 15px;
+      padding: 35px 25px;
+      box-shadow: 0 0 25px rgba(0,191,255,0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    .web-line {
+      position: fixed;
+      width: 2px;
+      height: 100vh;
+      background: rgba(255,255,255,0.05);
+      top: 0;
+      z-index: 0;
+    }
+
+    .web-line:nth-child(odd) {
+      left: calc(var(--x) * 10%);
+      transform: skewY(10deg);
+    }
+
+    .web-line:nth-child(even) {
+      left: calc(var(--x) * 10%);
+      transform: skewY(-10deg);
+    }
+
+    .spark {
+      position: fixed;
+      width: 4px;
+      height: 4px;
+      background: #00bfff;
+      border-radius: 50%;
+      animation: blink 2.5s infinite ease-in-out;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0; transform: scale(0.6); }
+      50% { opacity: 1; transform: scale(1.4); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🕸️ Carta del Asombroso Amor ❤️‍🔥</h1>
+
+  <p>
+    Nunca imaginé que una simple conversación pudiera cambiar tanto mi día... o mi vida.  
+    Nos conocimos entre risas y momentos casuales, pero desde entonces, algo quedó en el aire —  
+    como una telaraña invisible que nos mantenía conectados. 🕷️  
+    <br><br>
+
+    El año pasado fue un punto de partida, aunque nuestros caminos iban por direcciones distintas.  
+    Al inicio de este año, cuando tus capítulos comenzaron a cerrarse, los nuestros empezaron a escribirse.  
+    <br><br>
+
+    No fue amor a primera vista, fue algo más auténtico…  
+    una conexión que se fue tejiendo con paciencia, confianza y muchas sonrisas.  
+    <br><br>
+
+    Hace un par de semanas, esa amistad tomó otro rumbo,  
+    y lo que antes eran palabras normales ahora tienen otro peso, otra emoción, otra verdad. ❤️  
+    <br><br>
+
+    Como Spiderman, a veces me siento suspendido entre dos mundos:  
+    el del chico común que duda y el del héroe que siente con todo su corazón.  
+    Pero si algo he aprendido es que los grandes poderes vienen con grandes responsabilidades…  
+    y la más bonita de todas es cuidar lo que estoy empezando a sentir por ti. 💫  
+    <br><br>
+
+    Con todo mi cariño y mi lado más humano,  
+    <br>🕷️ Tu Spidey favorito ❤️
+  </p>
+
+  <script>
+    // Líneas de telaraña de fondo
+    for (let i = 0; i <= 10; i++) {
+      const line = document.createElement('div');
+      line.className = 'web-line';
+      line.style.setProperty('--x', i);
+      document.body.appendChild(line);
+    }
+
+    // Efecto de chispas azules
+    for (let i = 0; i < 30; i++) {
+      const spark = document.createElement('div');
+      spark.className = 'spark';
+      spark.style.top = Math.random() * 100 + 'vh';
+      spark.style.left = Math.random() * 100 + 'vw';
+      spark.style.animationDelay = (Math.random() * 3) + 's';
+      document.body.appendChild(spark);
+    }
+  </script>
+</body>
+  </html>
